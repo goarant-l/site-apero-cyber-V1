@@ -12,7 +12,7 @@
   <!-- Hero -->
   <div class="hero">
     <h1>Apér'o</h1>
-    <p>Bières artisanales &amp; produits du terroir — l'art de l'apéritif à la française</p>
+    <p>Bières artisanales &amp; produits du terroir - l'art de l'apéritif à la française</p>
   </div>
 
   <!-- Grille produits -->

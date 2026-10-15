@@ -358,5 +358,8 @@ footer.footer-apero .brand-foot {
 footer.footer-apero .icons { margin-top: .5rem; font-size: 1.2rem; }
 footer.footer-apero .icons i { margin: 0 .3rem; }
 
+footer.footer-apero .lien-footer { color: var(--ambre); text-decoration: underline; }
+footer.footer-apero .lien-footer:hover { color: #fff; }
+
 /* ─── MESSAGE ERREUR JS ─── */
 .erreur { color: #b91c1c; font-size: .85rem; min-height: 1.2rem; margin-top: .4rem; }

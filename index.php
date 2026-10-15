@@ -19,7 +19,8 @@ $pages_autorisees = [
    'details_panier',
    'historique_commande',
    'supprimer_panier_exe',
-   'valider_commande_exe'       
+   'valider_commande_exe',
+   'mentions_legales'    
 ];
 
 $page = isset($_GET['page']) && in_array($_GET['page'], $pages_autorisees)

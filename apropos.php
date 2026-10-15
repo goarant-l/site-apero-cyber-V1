@@ -58,7 +58,7 @@
   <div class="team">
     <div class="member">
       <h3>Alexandre Pirron</h3>
-      <p>Brasseur — Responsable des recettes et de la production</p>
+      <p>Brasseur - Responsable des recettes et de la production</p>
     </div>
     <div class="member">
       <h3>Lorène Goarant</h3>

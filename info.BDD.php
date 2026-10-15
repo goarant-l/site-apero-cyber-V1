@@ -4,7 +4,9 @@
 $host = 'localhost';
 $dbname   = 'site-apero-cyber';
 $username = 'root';
-$password = '';           // <-- Sur MAMP, le mot de passe est 'root'
+$password = '';           // <-- Sur XAAMP, le mot de passe est 'root'
+// $username = 'adminer';    <-- Sur PROMOX
+// $password = 'Lolo123cyber';  <-- Sur PROMOX
 
 try {
     $pdo = new PDO(
