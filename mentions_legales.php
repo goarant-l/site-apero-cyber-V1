@@ -15,7 +15,7 @@
     <p>
         Le site <strong>Apér'o</strong> est édité par :<br>
         <strong>GOARANT Lorène - BTS 2 option SLAM</strong><br>
-        Statut : projet pédagogique…]<br>
+        Statut : projet pédagogique<br>
         Adresse : 29590 Pont-de-Buis-lès-Quimerch, Bretagne<br>
         E-mail : <a href="mailto:contact@apero-bretagne.fr">contact@apero-bretagne.fr</a><br>
         Téléphone : +33 2 98 XX XX XX<br>
@@ -133,11 +133,11 @@
     <h3>5.5 Vos droits</h3>
     <p>Vous disposez des droits suivants sur vos données :</p>
     <ul class="liste-apero">
-        <li>droit d'accès et de copie de vos données ;</li>
-        <li>droit de rectification des données inexactes ;</li>
-        <li>droit à l'effacement (« droit à l'oubli »), sous réserve des obligations légales de conservation ;</li>
-        <li>droit à la limitation du traitement et droit d'opposition ;</li>
-        <li>droit à la portabilité de vos données.</li>
+        <li>Droit d'accès et de copie de vos données ;</li>
+        <li>Droit de rectification des données inexactes ;</li>
+        <li>Droit à l'effacement (« droit à l'oubli »), sous réserve des obligations légales de conservation ;</li>
+        <li>Droit à la limitation du traitement et droit d'opposition ;</li>
+        <li>Droit à la portabilité de vos données.</li>
     </ul>
     <p>
         Pour exercer ces droits, écrivez à <a href="mailto:contact@apero-bretagne.fr">contact@apero-bretagne.fr</a>.
