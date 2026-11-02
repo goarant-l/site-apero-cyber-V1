@@ -1,6 +1,5 @@
 <?php
-session_save_path(__DIR__ . '/tmp');
-session_start();
+
 
 $quantiteParam = $_POST['quantite'] ?? '';
 $idProduitParam = $_POST['idProduit'] ?? '';

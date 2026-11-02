@@ -1,6 +1,5 @@
 <?php
-session_save_path(__DIR__ . '/tmp');
-session_start();
+
 
 // Vérifier que le client est connecté
 if (!isset($_SESSION['client_user'])) {

@@ -1,6 +1,4 @@
 <?php
-session_save_path(__DIR__ . '/tmp');
-session_start();
 
 $login = $_POST["login"];
 $mdp = $_POST["mdp"];

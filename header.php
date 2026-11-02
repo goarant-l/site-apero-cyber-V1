@@ -31,8 +31,6 @@
 </head>
 
 <?php
-session_save_path(__DIR__ . '/tmp');
-session_start();
 
 $connecte = isset($_SESSION['user']);
 $clientConnecte = isset($_SESSION['client_user']);

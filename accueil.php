@@ -30,7 +30,7 @@
         <div class="card-produit">
           <!-- Lien sur l'image pour aller vers la fiche produit -->
           <a href="index.php?page=detail_produit&idProduit=<?php echo $produit['numProduit']; ?>">
-            <img src="/image/<?php echo htmlspecialchars($produit['nomImage']); ?>"
+            <img src="./image/<?php echo htmlspecialchars($produit['nomImage']); ?>"
               alt="<?php echo htmlspecialchars($produit['nomProduit']); ?>">
           </a>
 

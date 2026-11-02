@@ -1,6 +1,4 @@
 <?php
-session_save_path(__DIR__ . '/tmp');
-session_start();
 
 if (!isset($_SESSION['client_user'])) {
     header("location:index.php?page=connexion_client");
