@@ -1,12 +1,16 @@
-<?php
-// Connexion à la base de données
-// $host     = 'localhost:8889'; // <-- Ajout du port 8889
-$host = 'localhost';
-$dbname   = 'site-apero-cyber';
-$username = 'root';
-$password = '';           // <-- Sur XAAMP, le mot de passe est 'root'
-// $username = 'adminer';    <-- Sur PROMOX
-// $password = 'Lolo123cyber';  <-- Sur PROMOX
+<?php 
+// Chargement de l'autoload de Composer
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Chargement du fichier .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Récupération sécurisée des paramètres
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASS');
 
 try {
     $pdo = new PDO(
@@ -18,4 +22,5 @@ try {
 } catch (PDOException $e) {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
+
 ?>
