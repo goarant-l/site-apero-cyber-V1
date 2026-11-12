@@ -19,6 +19,9 @@ if ($existant) {
     exit();
 }
 
+// Hacher le mot de passe avant l'insertion
+$hashMdp = hasher_mdp($mdp);
+
 // Insertion du nouveau client
 $insertSQL = "INSERT INTO client (nom, prenom, pseudo, mdp) VALUES (:nom, :prenom, :pseudo, :mdp)";
 $reqInsert = $pdo->prepare($insertSQL);
@@ -26,7 +29,7 @@ $succes = $reqInsert->execute([
     'nom'    => $nom,
     'prenom' => $prenom,
     'pseudo' => $pseudo,
-    'mdp'    => $mdp
+    'mdp'    => $hashMdp
 ]);
 
 if ($succes) {
