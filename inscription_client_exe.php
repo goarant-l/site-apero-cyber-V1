@@ -1,10 +1,10 @@
 <?php
 
 
-$nom    = $_POST['nom']    ?? '';
+$nom = $_POST['nom']    ?? '';
 $prenom = $_POST['prenom'] ?? '';
 $pseudo = $_POST['pseudo'] ?? '';
-$mdp    = $_POST['mdp']    ?? '';
+$mdp = $_POST['mdp']    ?? '';
 
 require "./info.BDD.php";
 
@@ -18,6 +18,10 @@ if ($existant) {
     header("location:index.php?page=inscription_client&erreur=" . urlencode("Ce pseudo est déjà utilisé, veuillez en choisir un autre."));
     exit();
 }
+
+require "./info.BDD.php";
+require_once "./gestion_secrets.php";
+
 
 // Hacher le mot de passe avant l'insertion
 $hashMdp = hasher_mdp($mdp);
