@@ -117,7 +117,7 @@ try {
     $telephoneChiffre = chiffrer_donnee($telephone, $encryptionKey);
     $rueChiffree      = chiffrer_donnee($rue, $encryptionKey);
     $codePostalChiffre = chiffrer_donnee($codePostal, $encryptionKey);
-    $villeChiffree    = chiffrer_donnee($ville, $encryptionKey);
+    $villeChiffre    = chiffrer_donnee($ville, $encryptionKey);
 
     $pdo->beginTransaction();
 
@@ -143,8 +143,8 @@ try {
     ");
     $insertAdresse->execute([
         'rue'        => $rueChiffree,
-        'codePostal' => $codePostalChiffree,
-        'ville'      => $villeChiffree
+        'codePostal' => $codePostalChiffre,
+        'ville'      => $villeChiffre
     ]);
     $idAdresse = (int) $pdo->lastInsertId();
 
