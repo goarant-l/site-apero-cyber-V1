@@ -7,8 +7,11 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Chargement des variables d'environnement
-$hashKey = getenv('HASH_KEY');
-$encryptionKey = getenv('ENCRYPTION_KEY');
+// $hashKey = getenv('HASH_KEY');
+// $encryptionKey = getenv('ENCRYPTION_KEY');
+
+$hashKey = $_ENV['HASH_KEY'] ?? $_SERVER['HASH_KEY'] ?? (getenv('HASH_KEY') ?: '');
+$encryptionKey = $_ENV['ENCRYPTION_KEY'] ?? $_SERVER['ENCRYPTION_KEY'] ?? (getenv('ENCRYPTION_KEY') ?: '');
 
 function hasher_mdp (string $mdp): string {
 	return password_hash($mdp, PASSWORD_DEFAULT);
