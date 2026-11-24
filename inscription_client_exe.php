@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/gestion_secrets.php';
-require_once __DIR__ . '/info.BDD.php';
+// require_once __DIR__ . '/gestion_secrets.php';
+// require_once __DIR__ . '/info.BDD.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: index.php?page=inscription_client");
@@ -56,6 +56,13 @@ function redirigerErreur(string $message): void {
     exit();
 }
 
+require "./info.BDD.php";
+require_once "./gestion_secrets.php";
+
+
+// Hacher le mot de passe avant l'insertion
+// $hashMdp = hasher_mdp($mdp);
+
 // 1. Récupération et assainissement des données
 $nom        = trim($_POST['nom'] ?? '');
 $prenom     = trim($_POST['prenom'] ?? '');
@@ -109,7 +116,8 @@ try {
     $mailChiffre      = chiffrer_donnee($mail, $encryptionKey);
     $telephoneChiffre = chiffrer_donnee($telephone, $encryptionKey);
     $rueChiffree      = chiffrer_donnee($rue, $encryptionKey);
-    $villeChiffree    = chiffrer_donnee($ville, $encryptionKey);
+    $codePostalChiffre = chiffrer_donnee($codePostal, $encryptionKey);
+    $villeChiffre    = chiffrer_donnee($ville, $encryptionKey);
 
     $pdo->beginTransaction();
 
@@ -135,8 +143,8 @@ try {
     ");
     $insertAdresse->execute([
         'rue'        => $rueChiffree,
-        'codePostal' => (int) $codePostal,
-        'ville'      => $villeChiffree
+        'codePostal' => $codePostalChiffre,
+        'ville'      => $villeChiffre
     ]);
     $idAdresse = (int) $pdo->lastInsertId();
 
