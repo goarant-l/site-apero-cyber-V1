@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $pseudo = $_POST['pseudo'] ?? '';
 $mdp = $_POST['mdp']    ?? '';

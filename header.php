@@ -31,7 +31,6 @@
 </head>
 
 <?php
-
 $connecte = isset($_SESSION['user']);
 $clientConnecte = isset($_SESSION['client_user']);
 
@@ -79,6 +78,9 @@ $pageActive = $_GET['page'] ?? 'accueil';
       </a>
 
       <?php if ($clientConnecte): ?>
+        <span class="btn-nav" style="cursor: default;">
+          <i class="bi bi-person-check"></i> <?= htmlspecialchars($_SESSION['client_user']) ?>
+        </span>
         <a href="index.php?page=historique_commande">
           <button class="btn-nav <?= $pageActive === 'historique_commande' ? 'active' : '' ?>">
             <i class="bi bi-box-seam"></i> Mes commandes

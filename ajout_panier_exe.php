@@ -1,5 +1,7 @@
 <?php
-
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $quantiteParam = $_POST['quantite'] ?? '';
 $idProduitParam = $_POST['idProduit'] ?? '';
