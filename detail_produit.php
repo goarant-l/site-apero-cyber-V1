@@ -40,7 +40,7 @@ if (!$produit) {
 
         <!-- Image du produit -->
         <div style="flex: 1; min-width: 300px; display: flex; align-items: center; justify-content: center;">
-            <img src="/image/<?php echo htmlspecialchars($produit['nomImage']); ?>"
+            <img src="./image/<?php echo htmlspecialchars($produit['nomImage']); ?>"
                 alt="<?php echo htmlspecialchars($produit['nomProduit']); ?>"
                 style="max-width: 100%; height: auto; border-radius: 8px;">
         </div>

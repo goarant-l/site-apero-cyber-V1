@@ -110,7 +110,7 @@ try {
                     <?php foreach ($liste_produits as $article): ?>
                         <tr>
                             <td>
-                                <img src="/image/<?php echo htmlspecialchars($article['nomImage']); ?>"
+                                <img src="./image/<?php echo htmlspecialchars($article['nomImage']); ?>"
                                     alt="<?php echo htmlspecialchars($article['nomProduit']); ?>"
                                     style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;">
                             </td>
